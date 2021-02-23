@@ -1,12 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FilterComponent } from './filter/filter.component';
-
+const routes: Routes = [
+  {
+    path: '',
+    component: LoginComponent
+},
+  { path: 'first-component', component: LoginComponent },
+  { path: 'second-component', component: ShoppingCartComponent },
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,8 +24,10 @@ import { FilterComponent } from './filter/filter.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
