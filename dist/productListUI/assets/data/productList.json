@@ -1,0 +1,36 @@
+{
+    "Products": [
+        {
+            "id": "2018",
+            "name": "White Tiger Book",
+            "type": "Book",
+            "description": "Mac book pro air"
+        },
+        {
+            "id": "2019",
+            "name": "Apple Music",
+            "type": "Music",
+            "description": "Subscribe to Apple Music pro"
+        },
+        {
+            "id": "2020",
+            "name": "PUBG",
+            "type": "Games",
+            "description": "PLAYER UNKNOWN BATTEL GROUND"
+        },
+        {
+            "id": "2021",
+            "name": "Nine Seal Area",
+            "type": "Book",
+            "description": "99.9"
+        },
+        {
+            "id": "2022",
+            "name": "Kurt Gobainx",
+            "type": "Music",
+            "description": "Early 90's hit"
+        }
+       
+    ],
+    "Types": [ "Music" , "Book" , "Games" ]
+}
