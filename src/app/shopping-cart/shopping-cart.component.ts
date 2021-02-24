@@ -10,7 +10,9 @@ export class ShoppingCartComponent  {
   
     /* An empty array that is responsible to add a division */
        public items = []; 
+       public amountQuantity = []; 
         public data = data.Products;
+        public dataTypes = data.Types;
        /* A two-way binding performed which 
           pushes text on division */
        public newTask; 

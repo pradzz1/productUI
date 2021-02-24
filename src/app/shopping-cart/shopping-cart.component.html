@@ -2,21 +2,42 @@
 <!--Division for GeeksForGeeks heading-->
 <div class="container-fluid"> 
     <!--Division for taking input from user -->
-    <div class="row mt-1" style="height:80px;"> 
-        <div class="col-3 d-none col-md-3 d-md-block"></div> 
-        <div class="col-12 col-md-6 bg-success d-flex  
+    <div class="row mt-1 col-12" style="height:80px;"> 
+        <div class="col-12 d-none col-md-12 d-md-block"></div> 
+        <div class="col-12 col-md-12 d-flex  
                     justify-content-center align-items-center  
                     text-light h3"> 
-  
-            <input [(ngModel)]="newTask" type="text" 
-                    value="" class="col-7 form-control"
-                        style="width:300px;"> 
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                        </div>
+                        <input [(ngModel)]="newTask" type="text" 
+                        value="" class="form-control"
+                            style="width:300px;"> 
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Types</label>
+                        </div>
+                        <select
+                            class="form-control"
+                            name="ratings"
+                            placeholder="please select a type"
+                            [ngModel]="amountQuantity">
+                            <option 
+                                *ngFor="let orc of dataTypes"
+                                [value]="orc">
+                            {{orc}}
+                            </option>
+                            </select>
+                      </div>
+                       
                         
             <div class="col-1"></div> 
   
             <button (click)="addToList()"  
-                class="btn btn-light text-success"> 
-                ADD TASK 
+                class="circle-link-anchor" style="font-size: 12px;"> 
+                ADD PRODUCT 
             </button> 
         </div> 
   
@@ -24,9 +45,12 @@
     </div> 
   
     <!--Tasks added repeated divisions-->
-    <div *ngFor="let x of data; let index = index;"  > 
-        <p>{{x.id}}</p><p>{{x.name}}</p><p>{{x.type}}</p><p>{{x.description}}</p>
+    <div class="row mt-1 col-12 " >
+           <div class="col-4 card-container" *ngFor="let x of data; let index = index;"> 
+               <div class="card">
+        <span>{{x.id}}</span><span>{{x.name}}</span><span>{{x.type}}</span><span>{{x.description}}</span></div>
       </div>
+    </div>
     <div *ngFor="let x of items; let index = index;" 
             class="row mt-1" style="height:100px;"> 
   
