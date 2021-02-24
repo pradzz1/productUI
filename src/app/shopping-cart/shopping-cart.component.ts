@@ -19,6 +19,7 @@ export class ShoppingCartComponent  {
        /* A two-way binding performed which 
           pushes text on division */
        public newTask; 
+       public alert = false; 
        public name; 
        public quantity;
     warning: boolean = false;
@@ -26,11 +27,15 @@ export class ShoppingCartComponent  {
      
        /* When input is empty, it will 
           not create a new division */
+          public removeTag(){
+              this.alert = false;
+          }
        public addToList(newTask,quantity,productTypeSelected ) { 
            let kart = [];
            for(let val in this.items){
                if(this.items[val] == newTask){
-                   alert("already added");
+                   this.alert = true;
+                  
                    this.name = "";
                     this.productTypeSelected = "default";
                     this.products = this.data;
@@ -73,7 +78,7 @@ export class ShoppingCartComponent  {
           }
         };
         modelChanged($event){
-          console.log(this.products)
+         
         }
         ngOnInit() {
             this.productTypeSelected = "default";

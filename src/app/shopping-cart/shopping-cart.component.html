@@ -68,22 +68,27 @@
             </button> 
         </div> 
   
-        <div class="col-3 d-none col-md-3 d-md-block"><h5>PRODUCTS</h5></div> 
+        <div class="col-3 d-none col-md-3 d-md-block"><h5>PRODUCTS</h5>
+            <div class="alert alert-danger alert-msg" role="alert" *ngIf='alert'>
+                This {{newTask}} Product already added!
+                <span><i class="fa fa-cross-circle-right fa-lg" (click)="removeTag()">x</i></span>
+              </div>
+        </div> 
     </div> 
   
     <!--Tasks added repeated divisions-->
     <div class="row  " >
            <div class="col-4 card-container" *ngFor="let x of products | filterData: newTask"> 
                <div class="card col-12">
-        <div class="col-12">PRDOCUT ID : {{x.id}}</div> <div class="col-12">PRDOCUT NAME : {{x.name}}</div>
-       
-        <div class="col-12">PRDOCUT TYPE : {{x.type}}</div>
-        <div class="col-12">PRDOCUT DESCRIPTION : {{x.description}}</div>
-        <div class="col-12">QUANTITY SELECTED: <span class="warning">{{x.quantity}}</span></div>
-        <div class="alert alert-info" *ngIf='x.type == undefined'>
-            <strong>No Match Found!</strong>
-           please write correct product name!
-        </div>
+        <div class="col-12"> ID : {{x.id}}</div>
+        <div class="col-12"> NAME : {{x.name}}</div>
+        <div class="col-12"> TYPE : {{x.type}}</div>
+        <div class="col-12"> DESCRIPTION : {{x.description}}</div>
+        <div class="col-12">QUANTITY : {{x.quantity}}</div>
+         <div class="alert alert-info" *ngIf='products.length === 0'>
+        <strong>No Match Found!</strong>
+       please write correct product name!
+    </div>
     </div>
       </div>
      

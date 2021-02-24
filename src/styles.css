@@ -155,7 +155,12 @@
   }
   
   .warning{
-    background-color: #ff0f0f;
+    color: #ff0f0f;
+  }
+  .alert{
+    position: absolute;
+    top: 125px;
+    left: 26px;
   }
   .circle-link-anchor {
     height: 40px;
@@ -220,7 +225,7 @@
     transition: 1s ease-out;
   }
 
-  .circle-link:hover {
+  .circle-link-anchor:hover {
     transform: translateY(-0.25rem);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
