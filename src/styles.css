@@ -153,13 +153,16 @@
   a:hover {
     color: #125699;
   }
+  .warning{
+    background-color: red;
+  }
   .circle-link-anchor {
     height: 40px;
     width: 138px;
     border-radius: 40px;
     color: #fff !important;
     margin: 0px;
-    background-color: #1876d1;
+    background-color: #81bffb;
     border: 1px solid #1876d1;
     display: flex;
     justify-content: center;
