@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { FilterComponent } from './filter/filter.component';
+import { FormsModule } from '@angular/forms';
 const routes: Routes = [
   {
     path: '',
@@ -26,6 +27,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
+    FormsModule,
   ],
   exports: [RouterModule],
   providers: [],
