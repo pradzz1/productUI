@@ -2,33 +2,66 @@
     "Products": [
         {
             "id": "2018",
-            "name": "White Tiger Book",
+            "name": "roses",
             "type": "Book",
-            "description": "Mac book pro air"
+            "description": "Mac book pro air",
+            "quantity": ""
         },
         {
             "id": "2019",
-            "name": "Apple Music",
+            "name": "sunflower",
             "type": "Music",
-            "description": "Subscribe to Apple Music pro"
+            "description": "Subscribe to Apple Music pro",
+            "quantity": ""
         },
         {
             "id": "2020",
-            "name": "PUBG",
+            "name": "gta",
             "type": "Games",
-            "description": "PLAYER UNKNOWN BATTEL GROUND"
+            "description": "PLAYER UNKNOWN BATTEL GROUND",
+            "quantity": ""
         },
         {
             "id": "2021",
-            "name": "Nine Seal Area",
+            "name": "life",
             "type": "Book",
-            "description": "99.9"
+            "description": "99.9",
+            "quantity": ""
         },
         {
             "id": "2022",
-            "name": "Kurt Gobainx",
+            "name": "marygold",
             "type": "Music",
-            "description": "Early 90's hit"
+            "description": "Early 90's hit",
+            "quantity": ""
+        },
+        {
+            "id": "2023",
+            "name": "gold",
+            "type": "Games",
+            "description": "Early 90's hit",
+            "quantity": ""
+        },
+        {
+            "id": "2024",
+            "name": "doctorwho",
+            "type": "Book",
+            "description": "Early 90's hit",
+            "quantity": ""
+        },
+        {
+            "id": "2025",
+            "name": "larry",
+            "type": "Music",
+            "description": "99.9",
+            "quantity": ""
+        },
+        {
+            "id": "2026",
+            "name": "Circus",
+            "type": "Games",
+            "description": "99.9",
+            "quantity": ""
         }
        
     ],
