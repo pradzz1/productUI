@@ -45,10 +45,14 @@
     </div> 
   
     <!--Tasks added repeated divisions-->
-    <div class="row mt-1 col-12 " >
+    <div class="row  " >
            <div class="col-4 card-container" *ngFor="let x of data; let index = index;"> 
-               <div class="card">
-        <span>{{x.id}}</span><span>{{x.name}}</span><span>{{x.type}}</span><span>{{x.description}}</span></div>
+               <div class="card col-12">
+        <div class="col-12">PRDOCUT ID : {{x.id}}</div>
+        <div class="col-12">PRDOCUT NAME : {{x.name}}</div>
+        <div class="col-12">PRDOCUT TYPE : {{x.type}}</div>
+        <div class="col-12">PRDOCUT DESCRIPTION : {{x.description}}</div>
+    </div>
       </div>
     </div>
     <div *ngFor="let x of items; let index = index;" 
