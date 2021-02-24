@@ -153,8 +153,9 @@
   a:hover {
     color: #125699;
   }
+  
   .warning{
-    background-color: red;
+    background-color: #ff0f0f;
   }
   .circle-link-anchor {
     height: 40px;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { exit } from 'process';
 import data from '../../assets/data/productList.json';
 
 @Component({
@@ -15,7 +16,6 @@ export class ShoppingCartComponent  {
         public dataTypes = data.Types;
         public productTypeSelected = "";
         public products = this.data;
-        public kart = [];
        /* A two-way binding performed which 
           pushes text on division */
        public newTask; 
@@ -26,10 +26,35 @@ export class ShoppingCartComponent  {
      
        /* When input is empty, it will 
           not create a new division */
-       public addToList() { 
+       public addToList(newTask,quantity,productTypeSelected ) { 
+           let kart = [];
+           for(let val in this.items){
+               if(this.items[val] == newTask){
+                   alert("already added");
+                   this.name = "";
+                    this.productTypeSelected = "default";
+                    this.products = this.data;
+                   return;
+               }
+           }
+            if(newTask == undefined || quantity == undefined || productTypeSelected == "")
+            {
+                alert("please select value");
+                return ;
+            }else{
+
+                for(let qut in this.products){
+
+                    if(this.products[qut].name == newTask && this.products[qut].quantity == ""){
+    
+                        this.products[qut].quantity =  quantity
+                    }
+               }
+            }
            this.name = "";
            this.productTypeSelected = "default";
            this.products = this.data;
+           this.quantity = null;
            if (this.newTask == '') { 
            } 
            else { 
@@ -48,15 +73,11 @@ export class ShoppingCartComponent  {
           }
         };
         modelChanged($event){
-          
+          console.log(this.products)
         }
         ngOnInit() {
             this.productTypeSelected = "default";
           }
-       /* This function takes to input the 
-          task, that has to be deleted*/
-       public deleteTask(index) { 
-           this.items.splice(index, 1); 
-       } 
+      
 
 }
