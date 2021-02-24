@@ -13,6 +13,8 @@ export class ShoppingCartComponent  {
        public amountQuantity = []; 
         public data = data.Products;
         public dataTypes = data.Types;
+        public productTypeSelected = "";
+        public products = this.data;
        /* A two-way binding performed which 
           pushes text on division */
        public newTask; 
@@ -28,7 +30,19 @@ export class ShoppingCartComponent  {
                this.newTask = ''; 
            } 
        } 
-     
+       
+       onOptionsSelected(value:string){
+        this.productTypeSelected = value;
+        if(value == "default"){
+            this.products = this.data;
+        }else{
+                let filteredval = this.data.filter(function(el) { return el.type == value; });
+                this.products = filteredval;
+        }
+        };
+        ngOnInit() {
+            
+          }
        /* This function takes to input the 
           task, that has to be deleted*/
        public deleteTask(index) { 

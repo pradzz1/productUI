@@ -19,11 +19,14 @@
                         <div class="input-group-prepend">
                           <label class="input-group-text" for="inputGroupSelect01">Types</label>
                         </div>
-                        <select
+                        <select #mySelect
                             class="form-control"
                             name="ratings"
                             placeholder="please select a type"
-                            [ngModel]="amountQuantity">
+                            [ngModel]="productTypeSelected"
+                            (change)="onOptionsSelected(mySelect.value)"
+                            >
+                            <option value="default">ALL</option>
                             <option 
                                 *ngFor="let orc of dataTypes"
                                 [value]="orc">
@@ -46,7 +49,7 @@
   
     <!--Tasks added repeated divisions-->
     <div class="row  " >
-           <div class="col-4 card-container" *ngFor="let x of data; let index = index;"> 
+           <div class="col-4 card-container" *ngFor="let x of products; let index = index;"> 
                <div class="card col-12">
         <div class="col-12">PRDOCUT ID : {{x.id}}</div>
         <div class="col-12">PRDOCUT NAME : {{x.name}}</div>
