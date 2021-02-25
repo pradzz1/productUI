@@ -41,28 +41,8 @@
             "type": "Games",
             "description": "Early 90's hit",
             "quantity": ""
-        },
-        {
-            "id": "2024",
-            "name": "doctorwho",
-            "type": "Book",
-            "description": "Early 90's hit",
-            "quantity": ""
-        },
-        {
-            "id": "2025",
-            "name": "larry",
-            "type": "Music",
-            "description": "99.9",
-            "quantity": ""
-        },
-        {
-            "id": "2026",
-            "name": "Circus",
-            "type": "Games",
-            "description": "99.9",
-            "quantity": ""
         }
+       
        
     ],
     "Types": [ "Music" , "Book" , "Games" ]
